@@ -4,21 +4,18 @@ import classes from './HeroText.module.css';
 
 const HeroText = () => {
   const [text] = useTypewriter({
-    words: ['Web Developer', 'Software Engineer', 'Team Player'],
+    words: ['Web Developer', 'Software Engineer', 'Collaborator'],
     loop: false,
   });
 
   return (
     <div className={classes['hero-text-container']}>
-      <h1>Hi there! I'm Matthew Bronstein.</h1>
+      <h1>Hi there! I'm Matthew.</h1>
       <h2>
-        I am a{' '}
-        <span style={{ color: 'blue', fontWeight: 'bold' }}>
-          {/* Style will be inherited from the parent element */}
-          {text}
-        </span>
-        <Cursor cursorColor='blue' />
+        I am a <span className={classes.typewriter}>{text}</span>
+        <Cursor cursorColor='#2a1f80' />
       </h2>
+      <hr style={{ width: '50%' }} />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from './UI/Container';
+import Container from '../UI/Container';
 import HeroText from './HeroText';
 import classes from './Hero.module.css';
 
