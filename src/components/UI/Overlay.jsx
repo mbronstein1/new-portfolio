@@ -1,0 +1,9 @@
+import React from 'react';
+import classes from './Overlay.module.css';
+
+const Overlay = () => {
+  // Overlay for video
+  return <div className={classes.overlay}></div>;
+};
+
+export default Overlay;
