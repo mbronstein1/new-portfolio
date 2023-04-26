@@ -24,8 +24,6 @@
   color: inherit;
 }
 
-.nav-list a:hover,
-.nav-list a:active {
+.nav-list a:hover {
   cursor: pointer;
-  background-color: blue;
 }

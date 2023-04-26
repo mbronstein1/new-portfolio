@@ -1,0 +1,19 @@
+.about {
+  background-image: url('../../assets/background.svg');
+  min-height: 500px;
+  padding-block: 5rem;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.about-content > div {
+  max-width: 400px;
+}
+
+.about-content img {
+  border-radius: 30px;
+}
