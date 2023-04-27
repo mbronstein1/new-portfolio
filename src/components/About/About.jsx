@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './About.module.css';
 import Container from '../UI/Container';
 import headshot from '../../assets/headshot.jpeg';
+import Logos from './Logos';
 
 const About = () => {
   return (
@@ -17,6 +18,7 @@ const About = () => {
               This is the about section. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam accusantium doloribus provident sunt, quos inventore expedita
               necessitatibus libero eveniet quo qui iure eos optio eaque, dolor unde, dicta fugiat distinctio.
             </p>
+            <Logos />
           </div>
         </div>
       </Container>
