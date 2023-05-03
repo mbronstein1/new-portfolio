@@ -4,18 +4,32 @@
   color: white;
 }
 
-.contact-container h2 {
+.contact-header {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+.contact-header h3 {
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-bottom: 0;
+}
+
+.contact-header h4 {
+  margin: 1rem 0 3rem;
 }
 
 .content {
   display: flex;
   align-items: center;
+  gap: 2rem;
 }
 
 .content img {
   border-radius: 12px;
+  width: 310px;
+  max-width: 100%;
+  transform: translateY(-15px);
 }
 
 .contact-form {

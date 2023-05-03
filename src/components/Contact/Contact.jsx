@@ -6,7 +6,10 @@ import img from '../../assets/headshot-2.jpg';
 const Contact = () => {
   return (
     <div className={classes['contact-container']} id='contact'>
-      <h2>Contact Me!</h2>
+      <div className={classes['contact-header']}>
+        <h3>Contact Me</h3>
+        <h4>I'd Love To Hear From You!</h4>
+      </div>
       <Container>
         <div className={classes.content}>
           <form className={classes['contact-form']}>
@@ -20,7 +23,7 @@ const Contact = () => {
           </form>
 
           <div className={classes.img}>
-            <img src={img} width='300px' alt='' />
+            <img src={img} alt='' />
           </div>
         </div>
       </Container>

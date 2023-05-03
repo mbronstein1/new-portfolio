@@ -4,7 +4,7 @@ import classes from './HeroText.module.css';
 
 const HeroText = () => {
   const [text] = useTypewriter({
-    words: ['Web Developer', 'Software Engineer', 'Collaborator'],
+    words: ['Web Developer', 'Software Engineer', 'Collaborator', 'Eagle Scout', ''],
     loop: false,
   });
 

@@ -1,7 +1,7 @@
 .about {
   background-image: url('../../assets/background.svg');
   min-height: 500px;
-  padding-block: 5rem;
+  padding-block: 1rem;
 }
 
 .about-content {
