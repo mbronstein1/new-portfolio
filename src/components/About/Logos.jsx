@@ -10,65 +10,75 @@ const components = [
     component: AiFillHtml5,
     color: 'rgb(220,74,37)',
     rootMargin: '-50px 0px',
+    name: 'HTML',
   },
   {
     component: FaCss3Alt,
     color: 'rgb(33,76,228)',
     rootMargin: '-75px 0px',
+    name: 'CSS',
   },
   {
     component: SiJavascript,
     color: 'rgb(232,212,77)',
     rootMargin: '-100px 0px',
+    name: 'JavaScript',
   },
   {
     component: FaReact,
     color: 'rgb(96,219,251)',
     rootMargin: '-125px 0px',
+    name: 'React',
   },
   {
     component: SiRedux,
     color: 'rgb(118,73,189)',
     rootMargin: '-150px 0px',
+    name: 'Redux',
   },
   {
     component: SiTypescript,
     color: 'rgb(47,115,191)',
     rootMargin: '-175px 0px',
+    name: 'Typescript',
   },
   {
     component: FaNodeJs,
     color: 'rgb(81,153,66)',
     rootMargin: '-200px 0px',
+    name: 'Node.js',
   },
   {
     component: SiMysql,
     color: 'rgb(241,146,28)',
     rootMargin: '-225px 0px',
+    name: 'MySQL',
   },
   {
     component: SiMongodb,
     color: 'rgb(0,237,100)',
     rootMargin: '-250px 0px',
+    name: 'MongoDB',
   },
   {
     component: SiGraphql,
     color: 'rgb(239,0,151)',
     rootMargin: '-275px 0px',
+    name: 'GraphQL',
   },
 ];
 
 const Logos = () => {
   return (
-    <div className={classes.logos}>
-      {components.map(({ component: Component, rootMargin, color }, index) => (
+    <div className={classes['logos-container']}>
+      {components.map(({ component: Component, rootMargin, color, name }, index) => (
         <InView rootMargin={rootMargin} threshold={1} triggerOnce={true}>
           {({ inView, ref }) => (
-            <div
-              key={`About-icons: ${index}`}
-              ref={ref}
-              style={{ transform: `translateX(${inView ? '0' : '-50px'})`, transition: 'all .7s ease-in-out', opacity: `${inView ? 1 : 0}` }}>
+            <div key={`About-icons: ${index}`} ref={ref} className={`${inView ? classes.logos : `${classes.hidden}`}`}>
               <Component size='50px' color={color} />
+              <div className={classes['logos-overlay']}>
+                <p>{name}</p>
+              </div>
             </div>
           )}
         </InView>

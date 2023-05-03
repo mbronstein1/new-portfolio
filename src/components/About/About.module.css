@@ -18,3 +18,18 @@
 .about-content img {
   border-radius: 30px;
 }
+
+.about-content .btn {
+  border: none;
+  background-color: rgb(65, 201, 199);
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  color: white;
+  transition: 0.4s all ease-in-out;
+}
+
+.about-content .btn:hover {
+  cursor: pointer;
+  background-color: rgb(55, 157, 155);
+  transform: scale(1.1);
+}

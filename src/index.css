@@ -11,3 +11,13 @@ body,
   font-family: 'Roboto Slab', sans-serif;
   margin: 0;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex.col {
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}

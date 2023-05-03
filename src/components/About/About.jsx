@@ -9,8 +9,9 @@ const About = () => {
     <div id='about' className={classes.about}>
       <Container>
         <div className={classes['about-content']}>
-          <div>
+          <div className='flex col'>
             <img src={headshot} alt='headshot' width='200px' />
+            <button className={classes.btn}>See My Work</button>
           </div>
           <div>
             <h3>About Me</h3>
