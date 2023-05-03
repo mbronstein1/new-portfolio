@@ -1,5 +1,6 @@
 .navbar {
   display: flex;
+  color: white;
   align-items: center;
   justify-content: space-between;
   padding-inline: 2rem;
@@ -9,7 +10,8 @@
 }
 
 .navbar-top {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(89, 144, 142, 0.95);
+  z-index: 100;
   transition: all ease-in-out 0.5s;
 }
 
@@ -22,8 +24,4 @@
 .nav-list a {
   text-decoration: none;
   color: inherit;
-}
-
-.nav-list a:hover {
-  cursor: pointer;
 }

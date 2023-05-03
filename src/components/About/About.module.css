@@ -29,7 +29,6 @@
 }
 
 .about-content .btn:hover {
-  cursor: pointer;
   background-color: rgb(55, 157, 155);
   transform: scale(1.1);
 }

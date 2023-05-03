@@ -21,3 +21,8 @@ body,
   gap: 1rem;
   align-items: center;
 }
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}

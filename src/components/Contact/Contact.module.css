@@ -1,0 +1,48 @@
+.contact-container {
+  background-image: linear-gradient(to right, rgb(90, 143, 141), rgb(65, 201, 199), rgb(90, 143, 141));
+  padding: 0.5rem 0 1.5rem 0;
+  color: white;
+}
+
+.contact-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.content img {
+  border-radius: 12px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 400px;
+  margin-inline: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 5px;
+}
+
+.contact-form button {
+  padding: 0.5rem 1rem;
+  color: rgb(89, 144, 142);
+  margin-top: 0.5rem;
+  border: solid 1px rgb(89, 144, 142);
+  border-radius: 12px;
+  background-color: rgb(224, 255, 254);
+  width: fit-content;
+  margin-inline: auto;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-form button:hover {
+  background-color: rgb(180, 244, 243);
+}

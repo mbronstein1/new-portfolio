@@ -3,9 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90%;
+  height: 80%;
 }
 
 .typewriter {
-  color: #2a1f80;
+  color: rgb(76, 118, 117);
 }

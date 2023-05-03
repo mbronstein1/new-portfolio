@@ -3,16 +3,18 @@ import Overlay from './components/UI/Overlay';
 import Video from './components/UI/Video';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 
 function App() {
   return (
     <>
+      <Navbar />
       <Hero>
-        <Navbar />
         <Overlay />
         <Video />
       </Hero>
       <About />
+      <Contact />
     </>
   );
 }
