@@ -21,44 +21,11 @@
 
 .content {
   display: flex;
-  align-items: center;
   gap: 2rem;
 }
 
 .content img {
   border-radius: 12px;
   width: 310px;
-  max-width: 100%;
-  transform: translateY(-15px);
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 400px;
-  margin-inline: auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 5px;
-  border-radius: 12px;
-  border: 1px solid rgb(90, 143, 141);
-}
-
-.contact-form button {
-  padding: 0.5rem 1rem;
-  color: rgb(255, 255, 255);
-  margin-top: 0.5rem;
-  border: none;
-  border-radius: 12px;
-  background-color: rgb(65, 143, 141);
-  width: fit-content;
-  margin-inline: auto;
-  transition: all 0.2s ease-in-out;
-}
-
-.contact-form button:hover {
-  background-color: rgb(64, 101, 100);
+  transform: translateY(20px);
 }
