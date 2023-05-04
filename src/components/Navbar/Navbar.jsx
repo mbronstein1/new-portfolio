@@ -14,8 +14,8 @@ const Navbar = () => {
   });
 
   return (
-    <nav className={`${classes.navbar} ${!isAtTop && classes['navbar-top']}`}>
-      <h1>Logo</h1>
+    <nav className={`${classes.navbar} ${!isAtTop && classes['navbar-scroll']}`}>
+      <h1>MbronsteinWebDev</h1>
       <ul className={classes['nav-list']}>
         {NAV_ITEMS.map(item => (
           <li key={item}>

@@ -3,7 +3,7 @@ import classes from './Logos.module.css';
 import { InView } from 'react-intersection-observer';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { FaCss3Alt, FaReact, FaNodeJs } from 'react-icons/fa';
-import { SiJavascript, SiRedux, SiMysql, SiMongodb, SiGraphql, SiTypescript } from 'react-icons/si';
+import { SiJavascript, SiRedux, SiMysql, SiMongodb, SiGraphql, SiTypescript, SiExpress } from 'react-icons/si';
 
 const components = [
   {
@@ -49,21 +49,27 @@ const components = [
     name: 'Node.js',
   },
   {
+    component: SiExpress,
+    color: 'rgb(73,73,73)',
+    rootMargin: '-160px 0px',
+    name: 'Express.js',
+  },
+  {
     component: SiMysql,
     color: 'rgb(241,146,28)',
-    rootMargin: '-160px 0px',
+    rootMargin: '-180px 0px',
     name: 'MySQL',
   },
   {
     component: SiMongodb,
     color: 'rgb(0,237,100)',
-    rootMargin: '-180px 0px',
+    rootMargin: '-200px 0px',
     name: 'MongoDB',
   },
   {
     component: SiGraphql,
     color: 'rgb(239,0,151)',
-    rootMargin: '-200px 0px',
+    rootMargin: '-220px 0px',
     name: 'GraphQL',
   },
 ];
