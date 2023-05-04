@@ -72,7 +72,7 @@ const Logos = () => {
   return (
     <div className={classes['logos-container']}>
       {components.map(({ component: Component, rootMargin, color, name }, index) => (
-        <InView rootMargin={rootMargin} threshold={1} triggerOnce={true}>
+        <InView key={name} rootMargin={rootMargin} threshold={1} triggerOnce={true}>
           {({ inView, ref }) => (
             <div key={`About-icons: ${index}`} ref={ref} className={`${inView ? classes.logos : `${classes.hidden}`}`}>
               <Component size='50px' color={color} />

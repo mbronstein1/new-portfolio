@@ -1,7 +1,7 @@
 .contact-container {
-  background-image: linear-gradient(to right, rgb(90, 143, 141), rgb(65, 201, 199), rgb(90, 143, 141));
+  background-color: rgb(224, 255, 254);
   padding: 0.5rem 0 1.5rem 0;
-  color: white;
+  color: rgb(90, 143, 141);
 }
 
 .contact-header {
@@ -43,20 +43,22 @@
 .contact-form input,
 .contact-form textarea {
   padding: 5px;
+  border-radius: 12px;
+  border: 1px solid rgb(90, 143, 141);
 }
 
 .contact-form button {
   padding: 0.5rem 1rem;
-  color: rgb(89, 144, 142);
+  color: rgb(255, 255, 255);
   margin-top: 0.5rem;
-  border: solid 1px rgb(89, 144, 142);
+  border: none;
   border-radius: 12px;
-  background-color: rgb(224, 255, 254);
+  background-color: rgb(65, 143, 141);
   width: fit-content;
   margin-inline: auto;
   transition: all 0.2s ease-in-out;
 }
 
 .contact-form button:hover {
-  background-color: rgb(180, 244, 243);
+  background-color: rgb(64, 101, 100);
 }
