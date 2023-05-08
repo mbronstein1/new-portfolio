@@ -24,7 +24,10 @@ const Navbar = () => {
   });
 
   return (
-    <nav className={`${classes.navbar} ${isAtTop && location.pathname !== '/new-portfolio/portfolio' ? classes['nav-bar-top'] : classes['nav-bar__portfolio']}`}>
+    <nav
+      className={`${classes.navbar} ${
+        isAtTop && location.pathname !== '/new-portfolio/portfolio' ? classes['nav-bar-top'] : location.pathname === '/new-portfolio/portfolio' && classes['nav-bar__portfolio']
+      }`}>
       {location.pathname === '/new-portfolio/portfolio' ? (
         <Link to={'/new-portfolio'}>
           <h1>MbronsteinWebDev</h1>
