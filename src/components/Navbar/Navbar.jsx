@@ -24,19 +24,27 @@ const Navbar = () => {
   });
 
   return (
-    <nav className={`${classes.navbar} ${isAtTop && location.pathname !== '/portfolio' ? classes['nav-bar-top'] : classes['nav-bar__portfolio']}`}>
-      {location.pathname === '/portfolio' ? (
-        <Link to={'/'}>
+    <nav className={`${classes.navbar} ${isAtTop && location.pathname !== '/new-portfolio/portfolio' ? classes['nav-bar-top'] : classes['nav-bar__portfolio']}`}>
+      {location.pathname === '/new-portfolio/portfolio' ? (
+        <Link to={'/new-portfolio'}>
           <h1>MbronsteinWebDev</h1>
         </Link>
       ) : (
-        <Link to='#top'>
+        <HashLink to='/new-portfolio#top' smooth scroll={scrollWithOffset}>
           <h1>MbronsteinWebDev</h1>
-        </Link>
+        </HashLink>
       )}
       <ul className={classes['nav-list']}>
         {NAV_ITEMS.map(item => (
-          <li key={item}>{item === 'Portfolio' ? <Link to='/portfolio'>{item}</Link> : <Link to={`/#${item.toLowerCase()}`}>{item}</Link>}</li>
+          <li key={item}>
+            {item === 'Portfolio' ? (
+              <Link to='/new-portfolio/portfolio'>{item}</Link>
+            ) : (
+              <HashLink to={`/new-portfolio/#${item.toLowerCase()}`} smooth scroll={scrollWithOffset}>
+                {item}
+              </HashLink>
+            )}
+          </li>
         ))}
       </ul>
     </nav>

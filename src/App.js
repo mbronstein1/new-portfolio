@@ -5,12 +5,10 @@ import Layout from './components/UI/Layout';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <>
-      <Route path='/' element={<Layout />}>
-        <Route index={true} element={<Home />} />
-        <Route path='/portfolio' element={<Portfolio />} />
-      </Route>
-    </>
+    <Route path='/new-portfolio' element={<Layout />}>
+      <Route index={true} element={<Home />} />
+      <Route path='portfolio' element={<Portfolio />} />
+    </Route>
   )
 );
 
