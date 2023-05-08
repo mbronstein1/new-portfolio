@@ -30,21 +30,13 @@ const Navbar = () => {
           <h1>MbronsteinWebDev</h1>
         </Link>
       ) : (
-        <HashLink to='#top' smooth scroll={scrollWithOffset}>
+        <Link to='#top'>
           <h1>MbronsteinWebDev</h1>
-        </HashLink>
+        </Link>
       )}
       <ul className={classes['nav-list']}>
         {NAV_ITEMS.map(item => (
-          <li key={item}>
-            {item === 'Portfolio' ? (
-              <Link to='/portfolio'>{item}</Link>
-            ) : (
-              <HashLink to={`/#${item.toLowerCase()}`} smooth scroll={scrollWithOffset}>
-                {item}
-              </HashLink>
-            )}
-          </li>
+          <li key={item}>{item === 'Portfolio' ? <Link to='/portfolio'>{item}</Link> : <Link to={`/#${item.toLowerCase()}`}>{item}</Link>}</li>
         ))}
       </ul>
     </nav>
