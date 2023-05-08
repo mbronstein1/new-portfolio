@@ -5,7 +5,7 @@ import classes from './Hero.module.css';
 const Hero = ({ children }) => {
   return (
     <>
-      <div className={classes.hero}>
+      <div className={classes.hero} id='top'>
         {children}
         <HeroText />
       </div>

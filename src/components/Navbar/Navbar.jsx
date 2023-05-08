@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import classes from './Navbar.module.css';
-import { Link } from 'react-scroll';
+import { HashLink } from 'react-router-hash-link';
 
 const NAV_ITEMS = ['About', 'Portfolio', 'Contact'];
 
+const scrollWithOffset = el => {
+  const elId = el.getAttribute('id');
+  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+  const yOffset = elId === 'contact' ? -100 : -140;
+  window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
+};
+
 const Navbar = () => {
   const [isAtTop, setIsAtTop] = useState(true);
+  const location = useLocation();
 
+  // Handle navbar state based on the lcoation of the window
   useEffect(() => {
     window.onscroll = () => (window.pageYOffset === 0 ? setIsAtTop(true) : setIsAtTop(false));
 
@@ -14,14 +24,26 @@ const Navbar = () => {
   });
 
   return (
-    <nav className={`${classes.navbar} ${!isAtTop && classes['navbar-scroll']}`}>
-      <h1>MbronsteinWebDev</h1>
+    <nav className={`${classes.navbar} ${isAtTop && location.pathname !== '/portfolio' ? classes['nav-bar-top'] : classes['nav-bar__portfolio']}`}>
+      {location.pathname === '/portfolio' ? (
+        <Link to={'/'}>
+          <h1>MbronsteinWebDev</h1>
+        </Link>
+      ) : (
+        <HashLink to='#top' smooth scroll={scrollWithOffset}>
+          <h1>MbronsteinWebDev</h1>
+        </HashLink>
+      )}
       <ul className={classes['nav-list']}>
         {NAV_ITEMS.map(item => (
           <li key={item}>
-            <Link to={item.toLowerCase()} smooth={true} offset={-70} duration={500}>
-              {item}
-            </Link>
+            {item === 'Portfolio' ? (
+              <Link to='/portfolio'>{item}</Link>
+            ) : (
+              <HashLink to={`/#${item.toLowerCase()}`} smooth scroll={scrollWithOffset}>
+                {item}
+              </HashLink>
+            )}
           </li>
         ))}
       </ul>

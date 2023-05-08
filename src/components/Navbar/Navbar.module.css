@@ -7,12 +7,18 @@
   position: sticky;
   top: 0;
   transition: all ease-in-out 0.2s;
+  background-color: rgb(89, 144, 142, 0.95);
 }
 
-.navbar-scroll {
-  background-color: rgb(89, 144, 142, 0.95);
+.nav-bar-top {
   z-index: 100;
   transition: all ease-in-out 0.5s;
+  background-color: transparent;
+}
+
+.nav-bar__portfolio {
+  z-index: 100;
+  transition: none;
 }
 
 .nav-list {

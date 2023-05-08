@@ -1,24 +1,21 @@
-import Navbar from './components/Navbar/Navbar';
-import Overlay from './components/UI/Overlay';
-import Video from './components/UI/Video';
-import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
+import { RouterProvider, createRoutesFromElements, createBrowserRouter, Route } from 'react-router-dom';
+import Portfolio from './pages/Portfolio';
+import Home from './pages/Home';
+import Layout from './components/UI/Layout';
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Hero>
-        <Overlay />
-        <Video />
-      </Hero>
-      <About />
-      <Contact />
-      <Footer />
-    </>
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <>
+        <Route path='/' element={<Layout />}>
+          <Route index={true} element={<Home />} />
+          <Route path='/portfolio' element={<Portfolio />} />
+        </Route>
+      </>
+    )
   );
+
+  return <RouterProvider router={router} />;
 }
 
 export default App;
