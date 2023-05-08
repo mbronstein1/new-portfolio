@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/mbronstein1.github.io/new-portfolio/static/css/main.18766723.css",
+    "main.js": "/mbronstein1.github.io/new-portfolio/static/js/main.adbea9e3.js",
+    "static/media/line-46957.mp4": "/mbronstein1.github.io/new-portfolio/static/media/line-46957.896439bdd41674157aab.mp4",
+    "static/media/headshot.jpeg": "/mbronstein1.github.io/new-portfolio/static/media/headshot.e76c49cd99578c77c51b.jpeg",
+    "static/media/headshot-2.jpg": "/mbronstein1.github.io/new-portfolio/static/media/headshot-2.74a57a0d0e6d1a12ed3d.jpg",
+    "static/media/background.svg": "/mbronstein1.github.io/new-portfolio/static/media/background.136af7298ca98a1da69a.svg",
+    "index.html": "/mbronstein1.github.io/new-portfolio/index.html",
+    "main.18766723.css.map": "/mbronstein1.github.io/new-portfolio/static/css/main.18766723.css.map",
+    "main.adbea9e3.js.map": "/mbronstein1.github.io/new-portfolio/static/js/main.adbea9e3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18766723.css",
+    "static/js/main.adbea9e3.js"
+  ]
+}
