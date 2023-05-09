@@ -44,7 +44,7 @@ export const useFormHandler = () => {
       try {
         setIsLoading(true);
         await send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID);
-        setStatus({ error: false, message: 'Successfully sent' });
+        setStatus({ error: false, message: "Thanks for reaching out! I'll be in touch soon." });
         setFormData({ name: '', email: '', message: '' });
       } catch (err) {
         setStatus({ error: true, message: 'Something went wrong. Please try again.' });

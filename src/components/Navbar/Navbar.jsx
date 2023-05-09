@@ -28,15 +28,9 @@ const Navbar = () => {
       className={`${classes.navbar} ${
         isAtTop && location.pathname !== '/new-portfolio/portfolio' ? classes['nav-bar-top'] : location.pathname === '/new-portfolio/portfolio' && classes['nav-bar__portfolio']
       }`}>
-      {location.pathname === '/new-portfolio/portfolio' ? (
-        <Link to={'/new-portfolio'}>
-          <h1>MbronsteinWebDev</h1>
-        </Link>
-      ) : (
-        <HashLink to='/new-portfolio#top' smooth scroll={scrollWithOffset}>
-          <h1>MbronsteinWebDev</h1>
-        </HashLink>
-      )}
+      <HashLink to='/new-portfolio#top' smooth scroll={scrollWithOffset}>
+        <h1>Matthew Bronstein</h1>
+      </HashLink>
       <ul className={classes['nav-list']}>
         {NAV_ITEMS.map(item => (
           <li key={item}>
