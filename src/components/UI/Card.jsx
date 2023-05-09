@@ -17,7 +17,19 @@ const Card = ({ data: { title, type, img, description, liveLink, githubLink } })
       </div>
       <div className={` ${classes.back}`}>
         <div className={`${classes['card-content']}`}>
-          <h4>Hi</h4>
+          <p>{description}</p>
+          <div className={classes.technologies}>
+            <p>Technologies:</p>
+            <p>{type}</p>
+          </div>
+          <div>
+            <a href={githubLink} target='__blank' referrerPolicy='no-referrer'>
+              Github
+            </a>
+            <a href={liveLink} target='__blank' referrerPolicy='no-referrer'>
+              Deployed Site
+            </a>
+          </div>
         </div>
       </div>
     </div>
