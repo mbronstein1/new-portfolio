@@ -1,0 +1,59 @@
+.card {
+  flex: 1 1 400px;
+  min-height: 300px;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+
+.card.flipped .front {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .back {
+  transform: rotateY(0deg);
+}
+
+.front,
+.back {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  display: block;
+  box-shadow: 10px 10px 5px rgb(95, 77, 99);
+  position: absolute;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: -webkit-transform ease 500ms;
+  transition: transform ease 500ms;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+.back {
+  transform: rotateY(-180deg);
+  background-color: rgb(89, 144, 142, 0.95);
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.card-content {
+  padding: 1rem;
+  z-index: 100;
+  color: white;
+}
+
+.card-content h4 {
+  font-size: 1.25rem;
+}
