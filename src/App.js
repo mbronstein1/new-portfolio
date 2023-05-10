@@ -1,13 +1,21 @@
+import { lazy, Suspense } from 'react';
 import { RouterProvider, createRoutesFromElements, createBrowserRouter, Route } from 'react-router-dom';
-import Portfolio from './pages/Portfolio';
 import Home from './pages/Home';
 import Layout from './components/UI/Layout';
+const Portfolio = lazy(() => import('./pages/Portfolio'));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/new-portfolio' element={<Layout />}>
       <Route index={true} element={<Home />} />
-      <Route path='portfolio' element={<Portfolio />} />
+      <Route
+        path='portfolio'
+        element={
+          <Suspense fallback={<div style={{ textAlign: 'center', backgroundColor: 'rgb(220, 255, 255)' }}>Loading...</div>}>
+            <Portfolio />
+          </Suspense>
+        }
+      />
     </Route>
   )
 );
