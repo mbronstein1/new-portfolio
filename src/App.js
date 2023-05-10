@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import Layout from './components/UI/Layout';
 const Portfolio = lazy(() => import('./pages/Portfolio'));
 
+const fallbackStyle = { textAlign: 'center', backgroundColor: 'rgb(220, 255, 255)' };
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/new-portfolio' element={<Layout />}>
@@ -11,7 +13,7 @@ const router = createBrowserRouter(
       <Route
         path='portfolio'
         element={
-          <Suspense fallback={<div style={{ textAlign: 'center', backgroundColor: 'rgb(220, 255, 255)' }}>Loading...</div>}>
+          <Suspense fallback={<div style={fallbackStyle}>Loading...</div>}>
             <Portfolio />
           </Suspense>
         }
