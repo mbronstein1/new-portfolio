@@ -1,5 +1,5 @@
 .portfolio {
-  background-color: rgb(224, 255, 254);
+  background-image: url('../assets/background_portfolio.svg');
   padding-block: 1rem 3rem;
   text-align: center;
   color: rgb(90, 143, 141);
@@ -7,7 +7,15 @@
 
 .portfolio h2 {
   font-size: 2rem;
-  padding-bottom: 1rem;
+  background-color: rgba(90, 143, 141, 0.8);
+  width: fit-content;
+  margin-inline: auto;
+  padding: 0.5rem 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 3px 3px 3px rgb(95, 77, 99);
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px black;
+  -webkit-text-stroke: 0.1px rgb(220, 255, 255);
 }
 
 .card-container {

@@ -26,6 +26,8 @@
   transform-style: preserve-3d;
   transition: -webkit-transform ease 500ms;
   transition: transform ease 500ms;
+  text-shadow: 2px 2px 2px black;
+  -webkit-text-stroke: 0.1px rgb(220, 255, 255);
 }
 
 .front {
@@ -50,7 +52,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  padding: 1rem;
+  padding: 4rem;
   z-index: 100;
   color: white;
 }

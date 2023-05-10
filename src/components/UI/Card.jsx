@@ -1,37 +1,37 @@
 import React, { useState } from 'react';
 import classes from './Card.module.css';
+import FrontCard from './FrontCard';
+import BackCard from './BackCard';
 
-const Card = ({ data: { title, type, img, description, liveLink, githubLink } }) => {
+const Card = ({ data }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const flip = () => {
     setIsFlipped(prev => !prev);
   };
 
+  const style = {
+    backgroundImage: `url(${data.img})`,
+    backgroundSize: 'cover',
+    backgroundPositionX: 'center',
+  };
+
+  const frontClasses = {
+    front: classes.front,
+    cardContent: classes['card-content'],
+    cardOverlay: classes['card-overlay'],
+  };
+
+  const backClasses = {
+    back: classes.back,
+    cardContent: classes['card-content'],
+    technologies: classes.technologies,
+  };
+
   return (
     <div onMouseEnter={flip} onMouseLeave={flip} className={`${classes.card} ${isFlipped ? classes.flipped : ''}`}>
-      <div style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPositionX: 'center' }} className={` ${classes.front}`}>
-        <div className={`${classes['card-content']} ${classes['card-overlay']}`}>
-          <h4>{title}</h4>
-        </div>
-      </div>
-      <div className={` ${classes.back}`}>
-        <div className={`${classes['card-content']}`}>
-          <p>{description}</p>
-          <div className={classes.technologies}>
-            <p>Technologies:</p>
-            <p>{type}</p>
-          </div>
-          <div>
-            <a href={githubLink} target='__blank' referrerPolicy='no-referrer'>
-              Github
-            </a>
-            <a href={liveLink} target='__blank' referrerPolicy='no-referrer'>
-              Deployed Site
-            </a>
-          </div>
-        </div>
-      </div>
+      <FrontCard title={data.title} className={frontClasses} style={style} />
+      <BackCard cardInfo={data} className={backClasses} />
     </div>
   );
 };

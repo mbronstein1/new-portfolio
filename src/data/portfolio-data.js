@@ -13,7 +13,7 @@ const projectData = [
   {
     id: 1,
     title: 'Full Moon Manor',
-    type: 'ReactJS, GraphQL, MongoDB/Mongoose',
+    type: 'ReactJS, NodeJS, GraphQL, MongoDB/Mongoose',
     img: hauntedHouse,
     description: 'Enjoy this text-based, story-driven exploration game where users must escape a haunted house before their health points reach zero.',
     liveLink: 'https://secret-river-41082.herokuapp.com/',
@@ -31,7 +31,7 @@ const projectData = [
   {
     id: 3,
     title: 'Couch Potato',
-    type: 'MVC: Handlebars, Express, MySQL/Sequelize',
+    type: 'MVC: Handlebars, NodeJS, Express, MySQL/Sequelize',
     img: couchPotato,
     description: 'Search and store information about favorite movies in a single digital collection.',
     liveLink: 'https://infinite-river-93616.herokuapp.com/',
@@ -40,7 +40,7 @@ const projectData = [
   {
     id: 4,
     title: 'Cocktail Concierge',
-    type: 'HTML, CSS, JS, APIs',
+    type: 'HTML, CSS, JavaScript, The Cocktail DB API',
     img: cocktailConcierge,
     description: 'Receive recipes to a selection of cocktails based on search input.',
     liveLink: 'https://tyleresselman.github.io/cocktail-concierge-project-1/index.html',
@@ -67,7 +67,7 @@ const projectData = [
   {
     id: 7,
     title: 'Weather Dashboard',
-    type: 'HTML, CSS, JS, OpenWeather API',
+    type: 'HTML, CSS, JavaScript, OpenWeather API',
     img: weatherDashboard,
     description: 'View the current weather and 5-day forecast in any city.',
     liveLink: 'https://mbronstein1.github.io/Weather-Dashboard',
