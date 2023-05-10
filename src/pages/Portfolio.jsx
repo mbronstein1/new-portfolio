@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Container from '../components/UI/Container';
 import Card from '../components/UI/Card';
 import classes from './Portfolio.module.css';
 import projectData from '../data/portfolio-data';
 
 const Portfolio = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className={classes.portfolio}>
       <Container>

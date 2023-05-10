@@ -1,4 +1,5 @@
 .navbar {
+  z-index: 100;
   display: flex;
   color: white;
   align-items: center;
@@ -11,13 +12,11 @@
 }
 
 .nav-bar-top {
-  z-index: 100;
   transition: all ease-in-out 0.5s;
   background-color: transparent;
 }
 
 .nav-bar__portfolio {
-  z-index: 100;
   transition: none;
 }
 

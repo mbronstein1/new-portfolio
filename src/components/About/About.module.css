@@ -1,18 +1,42 @@
 .about {
   background-image: url('../../assets/background.svg');
-  min-height: 500px;
-  padding-block: 1rem;
+  padding: 1rem 0 4rem;
+}
+
+.about h3 {
+  font-size: 2rem;
+  text-decoration: underline;
+  color: white;
+  background-color: rgba(90, 143, 141, 0.8);
+  width: fit-content;
+  margin-inline: auto;
+  padding: 0.5rem 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 3px 3px 3px rgb(95, 77, 99);
+  border-radius: 10px;
+  text-shadow: 1px 1px 2px black;
 }
 
 .about-content {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  flex-wrap: wrap-reverse;
   gap: 1rem;
 }
 
+.about__text-container {
+  color: white;
+  text-align: justify;
+  background-color: rgba(89, 144, 142, 0.95);
+  padding: 0.5rem 2rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px black;
+  line-height: 1.5;
+}
+
 .about-content > div {
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .about-content img {
@@ -23,12 +47,20 @@
   border: none;
   background-color: rgb(65, 201, 199);
   padding: 0.5rem 1rem;
+  margin-block: 1rem;
   border-radius: 12px;
   color: white;
+  font-size: 1rem;
   transition: 0.4s all ease-in-out;
 }
 
 .about-content .btn:hover {
   background-color: rgb(55, 157, 155);
   transform: scale(1.1);
+}
+
+@media screen and (max-width: 806px) {
+  .about h3 {
+    margin-block: 1rem 2rem;
+  }
 }
