@@ -25,6 +25,7 @@
 }
 
 .about__text-container {
+  font-size: 0.95rem;
   color: white;
   text-align: justify;
   background-color: rgba(89, 144, 142, 0.95);
