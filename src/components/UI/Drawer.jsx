@@ -8,7 +8,9 @@ const navItems = ['About', 'Portfolio', 'Contact'];
 const Drawer = ({ isOpen, setIsOpen }) => {
   return (
     <div className={`${classes.drawer} ${isOpen ? classes.open : classes.closed}`}>
-      <h1>Matthew Bronstein</h1>
+      <HashLink to='/new-portfolio#top' smooth scroll={scrollWithOffset} onClick={() => setIsOpen(false)}>
+        <h1>Matthew Bronstein</h1>
+      </HashLink>
       <hr />
       <ul>
         {navItems.map(item => (
