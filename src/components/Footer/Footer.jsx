@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import classes from './Footer.module.css';
 import { GrFacebook, GrLinkedin, GrGithub } from 'react-icons/gr';
 
@@ -28,6 +29,8 @@ const socials = [
 ];
 
 const Footer = () => {
+  const isMobile = useMediaQuery({ query: '(max-width: 645px)' });
+
   return (
     <div className={classes.footer}>
       <div>
@@ -41,13 +44,13 @@ const Footer = () => {
           ))}
         </ul>
       </div>
-      <div>|</div>
+      {!isMobile && <div>|</div>}
       <div>
         <a className={classes.email} href='mailto:mbronstein1@gmail.com'>
           mbronstein1@gmail.com
         </a>
       </div>
-      <div>|</div>
+      {!isMobile && <div>|</div>}
       <div>
         <p>MbronsteinWebDev</p>
       </div>
