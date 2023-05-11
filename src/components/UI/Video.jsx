@@ -5,8 +5,8 @@ import classes from './Video.module.css';
 // Background video
 const Video = () => {
   return (
-    <video className={classes.video} playsInline autoPlay muted loop>
-      <source src={video} type='video/webm' />
+    <video className={classes.video} playsinline autoPlay muted loop>
+      <source src={video} type='video/mp4' />
     </video>
   );
 };
