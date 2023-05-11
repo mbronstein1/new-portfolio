@@ -29,3 +29,13 @@
   width: 310px;
   transform: translateY(20px);
 }
+
+@media screen and (max-width: 645px) {
+  .content {
+    gap: 0;
+  }
+
+  .content img {
+    display: none;
+  }
+}

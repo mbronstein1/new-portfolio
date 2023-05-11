@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
 import classes from './Navbar.module.css';
 import { HashLink } from 'react-router-hash-link';
+import { Sling as Hamburger } from 'hamburger-react';
 
 const NAV_ITEMS = ['About', 'Portfolio', 'Contact'];
 
@@ -12,38 +12,25 @@ const scrollWithOffset = el => {
   window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
 };
 
-const Navbar = () => {
-  const [isAtTop, setIsAtTop] = useState(true);
-  const location = useLocation();
-
-  // Handle navbar state based on the lcoation of the window
-  useEffect(() => {
-    window.onscroll = () => (window.pageYOffset === 0 ? setIsAtTop(true) : setIsAtTop(false));
-
-    return () => (window.onscroll = null);
-  });
-
+const Navbar = ({ isNavBarTop, isMobile, isOpen, setIsOpen }) => {
   return (
-    <nav
-      className={`${classes.navbar} ${
-        isAtTop && location.pathname !== '/new-portfolio/portfolio' ? classes['nav-bar-top'] : location.pathname === '/new-portfolio/portfolio' && classes['nav-bar__portfolio']
-      }`}>
+    <nav className={`${classes.navbar} ${isNavBarTop}`}>
       <HashLink to='/new-portfolio#top' smooth scroll={scrollWithOffset}>
         <h1>Matthew Bronstein</h1>
       </HashLink>
-      <ul className={classes['nav-list']}>
-        {NAV_ITEMS.map(item => (
-          <li key={item}>
-            {item === 'Portfolio' ? (
-              <Link to='/new-portfolio/portfolio'>{item}</Link>
-            ) : (
-              <HashLink to={`/new-portfolio/#${item.toLowerCase()}`} smooth scroll={scrollWithOffset}>
+      {isMobile ? (
+        <Hamburger toggled={isOpen} toggle={setIsOpen} />
+      ) : (
+        <ul className={classes['nav-list']}>
+          {NAV_ITEMS.map(item => (
+            <li key={item}>
+              <HashLink to={item === 'Portfolio' ? '/new-portfolio/portfolio' : `/new-portfolio/#${item.toLowerCase()}`} smooth scroll={scrollWithOffset}>
                 {item}
               </HashLink>
-            )}
-          </li>
-        ))}
-      </ul>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 };

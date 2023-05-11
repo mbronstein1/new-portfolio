@@ -1,0 +1,18 @@
+.drawer {
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(92, 145, 144);
+}
+
+.drawer.closed {
+  transition: transform ease-in-out 0.5s;
+  transform: translateX(-100%);
+}
+
+.drawer.open {
+  transition: transform ease-in-out 0.5s;
+  transform: translateX(0);
+}

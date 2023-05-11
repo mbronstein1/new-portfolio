@@ -1,10 +1,10 @@
 .overlay {
   height: 100%;
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
-  background: black;
+  z-index: -1;
+  background: rgb(89, 144, 142);
   opacity: 0.5;
 }

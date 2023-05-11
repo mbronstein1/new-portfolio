@@ -1,5 +1,5 @@
 import React from 'react';
-import Overlay from '../components/UI/Overlay';
+import VideoOverlay from '../components/UI/VideoOverlay';
 import Video from '../components/UI/Video';
 import Hero from '../components/Hero/Hero';
 import About from '../components/About/About';
@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <Hero>
-        <Overlay />
+        <VideoOverlay />
         <Video />
       </Hero>
       <About />
