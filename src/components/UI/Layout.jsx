@@ -14,7 +14,7 @@ const Layout = () => {
       <Navbar isNavBarTop={isNavBarTop} isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} />
       {isMobile && (
         <div className={classes['drawer-container']}>
-          <Drawer isOpen={isOpen} />
+          <Drawer isOpen={isOpen} setIsOpen={setIsOpen} />
           {isOpen && <Overlay setIsOpen={setIsOpen} />}
         </div>
       )}

@@ -1,16 +1,10 @@
 import React from 'react';
 import classes from './Navbar.module.css';
+import { scrollWithOffset } from '../../utils/helpers';
 import { HashLink } from 'react-router-hash-link';
 import { Sling as Hamburger } from 'hamburger-react';
 
 const NAV_ITEMS = ['About', 'Portfolio', 'Contact'];
-
-const scrollWithOffset = el => {
-  const elId = el.getAttribute('id');
-  const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-  const yOffset = elId === 'contact' ? -40 : -74;
-  window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
-};
 
 const Navbar = ({ isNavBarTop, isMobile, isOpen, setIsOpen }) => {
   return (

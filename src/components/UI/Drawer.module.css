@@ -1,10 +1,29 @@
 .drawer {
   position: fixed;
   top: 0;
-  width: 50%;
+  width: 60%;
   height: 100%;
   z-index: 100;
   background-color: rgba(92, 145, 144);
+  color: white;
+  text-align: center;
+}
+
+.drawer h1 {
+  font-size: 1.5rem;
+  padding: 0 0.5rem 0.5rem;
+}
+
+.drawer ul {
+  margin-block: 1rem;
+  padding: 0;
+}
+
+.drawer ul li {
+  max-width: 100%;
+  margin: auto 2rem;
+  padding: 1.5rem 0;
+  border-bottom: white 1px solid;
 }
 
 .drawer.closed {
