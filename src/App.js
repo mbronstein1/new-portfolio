@@ -8,7 +8,7 @@ const fallbackStyle = { textAlign: 'center', backgroundColor: 'rgb(220, 255, 255
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/new-portfolio' element={<Layout />}>
+    <Route path='/' element={<Layout />}>
       <Route index={true} element={<Home />} />
       <Route
         path='portfolio'
