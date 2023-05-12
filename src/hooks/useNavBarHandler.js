@@ -27,10 +27,7 @@ export const useNavBarHandler = () => {
 
   const isMobile = useMediaQuery({ query: '(max-width: 645px)' });
 
-  const isNavBarTop =
-    (isAtTop && location.pathname !== '/new-portfolio/portfolio') || isOpen
-      ? classes['nav-bar-top']
-      : location.pathname === '/new-portfolio/portfolio' && classes['nav-bar__portfolio'];
+  const isNavBarTop = (isAtTop && location.pathname !== '/portfolio') || isOpen ? classes['nav-bar-top'] : location.pathname === '/portfolio' && classes['nav-bar__portfolio'];
 
   return {
     setIsAtTop,
