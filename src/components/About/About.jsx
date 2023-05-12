@@ -9,7 +9,7 @@ const About = () => {
   const navigate = useNavigate();
 
   const portfolioButtonHandler = () => {
-    navigate('/new-portfolio/portfolio');
+    navigate('/portfolio');
   };
 
   return (
