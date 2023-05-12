@@ -9,7 +9,7 @@ const NAV_ITEMS = ['About', 'Portfolio', 'Contact'];
 const Navbar = ({ isNavBarTop, isMobile, isOpen, setIsOpen }) => {
   return (
     <nav className={`${classes.navbar} ${isNavBarTop}`}>
-      <HashLink to='/new-portfolio#top' smooth scroll={scrollWithOffset}>
+      <HashLink to='/#top' smooth scroll={scrollWithOffset}>
         <h1>Matthew Bronstein</h1>
       </HashLink>
       {isMobile ? (
@@ -18,7 +18,7 @@ const Navbar = ({ isNavBarTop, isMobile, isOpen, setIsOpen }) => {
         <ul className={classes['nav-list']}>
           {NAV_ITEMS.map(item => (
             <li key={item}>
-              <HashLink to={item === 'Portfolio' ? '/new-portfolio/portfolio' : `/new-portfolio/#${item.toLowerCase()}`} smooth scroll={scrollWithOffset}>
+              <HashLink to={item === 'Portfolio' ? '/portfolio' : `/#${item.toLowerCase()}`} smooth scroll={scrollWithOffset}>
                 {item}
               </HashLink>
             </li>
