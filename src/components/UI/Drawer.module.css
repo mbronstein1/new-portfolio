@@ -12,6 +12,7 @@
 .drawer h1 {
   font-size: 1.5rem;
   padding: 0 0.5rem 0.5rem;
+  text-shadow: 2px 2px 2px black;
 }
 
 .drawer ul {
@@ -24,6 +25,11 @@
   margin: auto 2rem;
   padding: 1.5rem 0;
   border-bottom: white 1px solid;
+  transition: 0.5s all ease-in-out;
+}
+
+.drawer ul li:hover {
+  text-shadow: 2px 2px 2px black;
 }
 
 .drawer.closed {

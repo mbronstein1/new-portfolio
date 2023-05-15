@@ -15,11 +15,7 @@ const Drawer = ({ isOpen, setIsOpen }) => {
       <ul>
         {navItems.map(item => (
           <li key={`${item}: drawer`}>
-            <HashLink
-              to={item === 'Portfolio' ? '/portfolio' : `/#${item.toLowerCase()}`}
-              smooth
-              scroll={scrollWithOffset}
-              onClick={() => setIsOpen(false)}>
+            <HashLink to={item === 'Portfolio' ? '/portfolio' : `/#${item.toLowerCase()}`} smooth scroll={scrollWithOffset} onClick={() => setIsOpen(false)}>
               {item}
             </HashLink>
           </li>
