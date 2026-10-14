@@ -4,8 +4,7 @@ export default function validateEmail(email) {
 }
 
 export const scrollWithOffset = el => {
-  const elId = el.getAttribute('id');
   const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-  const yOffset = elId === 'contact' ? -40 : -74;
+  const yOffset = el.getAttribute('id') === 'top' ? 0 : -64;
   window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
 };

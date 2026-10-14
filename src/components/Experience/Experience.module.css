@@ -1,0 +1,97 @@
+.company {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.company-name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.company-meta {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.timeline {
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 2rem;
+  list-style: none;
+}
+
+/* Vertical line connecting the roles */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: linear-gradient(var(--accent), var(--border));
+}
+
+.item {
+  position: relative;
+  padding-bottom: 2.25rem;
+}
+
+.item:last-child {
+  padding-bottom: 0;
+}
+
+/* Dot on the line for each role */
+.item::before {
+  content: '';
+  position: absolute;
+  left: calc(-2rem + 1px);
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--bg);
+  border: 2px solid var(--accent);
+}
+
+.item.current::before {
+  background-color: var(--accent);
+  box-shadow: 0 0 0 5px var(--accent-soft);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+}
+
+.header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.dates {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.item ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.1rem;
+  list-style: disc;
+  color: var(--muted);
+}
+
+.item ul li {
+  margin-bottom: 0.3rem;
+}
+
+.item ul li::marker {
+  color: var(--accent);
+}

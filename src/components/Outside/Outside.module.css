@@ -1,0 +1,46 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* Five faint staff lines across the top of each card */
+.staff {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  right: 0;
+  height: 41px;
+  background-image: repeating-linear-gradient(var(--border) 0 1px, transparent 1px 10px);
+  opacity: 0.8;
+}
+
+.icon {
+  position: relative;
+  color: var(--accent);
+  background-color: var(--surface);
+  padding-right: 0.5rem;
+}
+
+.item h3 {
+  font-size: 1.25rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.item p {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media screen and (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

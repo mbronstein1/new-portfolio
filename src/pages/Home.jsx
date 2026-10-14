@@ -1,18 +1,19 @@
 import React from 'react';
-import VideoOverlay from '../components/UI/VideoOverlay';
-import Video from '../components/UI/Video';
 import Hero from '../components/Hero/Hero';
 import About from '../components/About/About';
+import Experience from '../components/Experience/Experience';
+import Stack from '../components/Stack/Stack';
+import Outside from '../components/Outside/Outside';
 import Contact from '../components/Contact/Contact';
 
 const Home = () => {
   return (
     <>
-      <Hero>
-        <VideoOverlay />
-        <Video />
-      </Hero>
+      <Hero />
       <About />
+      <Experience />
+      <Stack />
+      <Outside />
       <Contact />
     </>
   );

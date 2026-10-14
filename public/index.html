@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Personal website for Matthew Bronstein - Full Stack Web Developer" />
+    <meta name="theme-color" content="#0a0f11" />
+    <meta name="description" content="Matthew Bronstein - Full Stack Engineer and Technical Lead" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.ico" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -21,7 +21,15 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>MbronsteinWebDev</title>
+    <title>Matthew Bronstein | Full Stack Engineer</title>
+    <script>
+      // Apply the saved theme before first paint to avoid a flash (dark by default)
+      try {
+        document.documentElement.dataset.theme = localStorage.getItem('theme') || 'dark';
+      } catch (e) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

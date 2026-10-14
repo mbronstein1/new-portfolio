@@ -16,7 +16,6 @@ const projectData = [
     type: 'ReactJS, NodeJS, GraphQL, MongoDB/Mongoose',
     img: hauntedHouse,
     description: 'Enjoy this text-based, story-driven exploration game where users must escape a haunted house before their health points reach zero.',
-    liveLink: 'https://secret-river-41082.herokuapp.com/',
     githubLink: 'https://github.com/jmruiz96/Full-Moon-Manor',
   },
   {

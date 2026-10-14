@@ -1,29 +1,38 @@
 .footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.content {
   display: flex;
-  color: white;
   justify-content: space-between;
-  gap: 1.5rem;
   align-items: center;
-  padding: 0.5rem 2rem;
-  min-height: 50px;
-  background-color: rgb(90, 143, 141);
+  gap: 1rem;
+  padding-block: 1.5rem;
+}
+
+.content p {
+  margin: 0;
 }
 
 .socials {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
+  margin: 0;
   padding: 0;
 }
 
-.footer a {
-  text-decoration: none;
-  color: inherit;
+.socials a {
+  display: inline-flex;
+  transition: color 0.2s ease;
 }
 
-@media screen and (max-width: 645px) {
-  .footer {
-    flex-direction: column-reverse;
-    justify-content: center;
-    gap: 0;
-  }
+.socials a:hover {
+  color: var(--accent);
+}
+
+/* Grommet icons hardcode their stroke color, so make them follow the text color */
+.socials svg path {
+  stroke: currentColor;
 }

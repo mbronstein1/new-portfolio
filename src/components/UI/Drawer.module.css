@@ -1,18 +1,27 @@
 .drawer {
   position: fixed;
   top: 0;
-  width: 60%;
+  width: 75%;
+  max-width: 320px;
   height: 100%;
   z-index: 100;
-  background-color: rgba(92, 145, 144);
-  color: white;
-  text-align: center;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--surface);
+  border-right: 1px solid var(--border);
+  color: var(--text);
 }
 
-.drawer h1 {
-  font-size: 1.5rem;
-  padding: 0 0.5rem 0.5rem;
-  text-shadow: 2px 2px 2px black;
+.logo {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo span {
+  color: var(--accent);
 }
 
 .drawer ul {
@@ -20,24 +29,26 @@
   padding: 0;
 }
 
-.drawer ul li {
-  max-width: 100%;
-  margin: auto 2rem;
-  padding: 1.5rem 0;
-  border-bottom: white 1px solid;
-  transition: 0.5s all ease-in-out;
+.drawer ul li a {
+  display: block;
+  padding: 0.9rem 0;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-.drawer ul li:hover {
-  text-shadow: 2px 2px 2px black;
+.drawer ul li a:hover,
+.drawer .resume {
+  color: var(--accent);
 }
 
 .drawer.closed {
-  transition: transform ease-in-out 0.5s;
+  transition: transform ease-in-out 0.4s;
   transform: translateX(-100%);
 }
 
 .drawer.open {
-  transition: transform ease-in-out 0.5s;
+  transition: transform ease-in-out 0.4s;
   transform: translateX(0);
 }

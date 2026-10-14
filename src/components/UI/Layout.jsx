@@ -5,15 +5,17 @@ import Drawer from './Drawer';
 import Overlay from './Overlay';
 import Footer from '../Footer/Footer';
 import { useNavBarHandler } from '../../hooks/useNavBarHandler';
-import classes from './Layout.module.css';
+import { useTheme } from '../../hooks/useTheme';
 
 const Layout = () => {
-  const { isNavBarTop, isMobile, isOpen, setIsOpen } = useNavBarHandler();
+  const { isTransparent, isMobile, isOpen, setIsOpen } = useNavBarHandler();
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <>
-      <Navbar isNavBarTop={isNavBarTop} isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} />
+      <Navbar isTransparent={isTransparent} isMobile={isMobile} isOpen={isOpen} setIsOpen={setIsOpen} theme={theme} toggleTheme={toggleTheme} />
       {isMobile && (
-        <div className={classes['drawer-container']}>
+        <div>
           <Drawer isOpen={isOpen} setIsOpen={setIsOpen} />
           {isOpen && <Overlay setIsOpen={setIsOpen} />}
         </div>

@@ -1,26 +1,62 @@
 .portfolio {
-  background-image: url('../assets/background_portfolio.svg');
-  padding-block: 1rem 3rem;
-  text-align: center;
-  color: white;
+  padding-top: 4rem;
 }
 
-.portfolio h2 {
-  font-size: 2rem;
-  background-color: rgba(90, 143, 141, 0.8);
-  width: fit-content;
-  margin-inline: auto;
-  padding: 0.5rem 2rem;
-  margin-bottom: 3rem;
-  box-shadow: 3px 3px 3px rgb(95, 77, 99);
-  border-radius: 10px;
-  text-shadow: 1px 1px 2px black;
+.title {
+  font-size: clamp(2.2rem, 5vw, 3.25rem);
+  margin: 0 0 1rem;
 }
 
-.card-container {
+.studies {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 1.5rem;
-  flex-wrap: wrap;
-  perspective: 4000px;
+}
+
+.earlier {
+  margin-top: 4rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+}
+
+.earlier summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  cursor: pointer;
+}
+
+.earlier summary::-webkit-details-marker {
+  display: none;
+}
+
+.earlier summary h2 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.earlier-meta {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: var(--muted);
+  transition: transform 0.3s ease;
+}
+
+.earlier[open] .chevron {
+  transform: rotate(180deg);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
 }

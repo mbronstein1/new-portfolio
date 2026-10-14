@@ -1,0 +1,50 @@
+.groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.group {
+  padding: 1.5rem;
+}
+
+.group h3 {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1rem;
+}
+
+.group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.group li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  background-color: var(--surface-2);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.group li:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 806px) {
+  .groups {
+    grid-template-columns: 1fr;
+  }
+}

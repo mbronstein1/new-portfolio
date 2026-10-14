@@ -1,32 +1,94 @@
 .navbar {
   z-index: 100;
+  position: sticky;
+  top: 0;
+  height: var(--nav-height);
   display: flex;
-  color: white;
   align-items: center;
   justify-content: space-between;
   padding-inline: 2rem;
-  position: sticky;
-  top: 0;
-  background-color: rgb(89, 144, 142, 0.95);
-  transition: all ease-in-out 0.2s;
+  color: var(--text);
+  background-color: color-mix(in srgb, var(--bg) 80%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.nav-bar-top {
-  transition: all ease-in-out 0.5s;
+.navbar.transparent {
   background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom-color: transparent;
 }
 
-.nav-bar__portfolio {
-  transition: none;
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  transition: opacity 0.5s ease;
+}
+
+.logo span {
+  color: var(--accent);
 }
 
 .nav-list {
-  list-style: none;
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.92rem;
 }
 
 .nav-list a {
-  text-decoration: none;
-  color: inherit;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.nav-list a:hover {
+  color: var(--text);
+}
+
+.nav-list .resume {
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+}
+
+.nav-list .resume:hover {
+  color: var(--on-accent);
+  background-color: var(--accent);
+}
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.mobile-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 645px) {
+  .navbar {
+    padding-inline: 1rem;
+  }
 }
