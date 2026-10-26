@@ -14,7 +14,7 @@ import {
   SiGithubactions,
   SiCloudflare,
 } from 'react-icons/si';
-import resume from '../assets/Matthew Bronstein-Condensed-Resume-10_14_26.pdf';
+import resume from '../assets/Matthew Bronstein-Condensed-Resume-10_26_26.pdf';
 
 export { resume };
 
